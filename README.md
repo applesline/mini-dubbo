@@ -1,5 +1,6 @@
 # mini-dubbo
-A mini dubbo implement, support redis &amp; zookeeper registry center , zero configuration and easy to use
+
+##### 迷你版dubbo实现，零配置、易于使用，支持redis、zookeeper注册中心，轻量级ioc容器guice提供对象容器化支持
 
 ---
 
