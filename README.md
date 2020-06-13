@@ -24,6 +24,7 @@ A mini dubbo implement, support redis &amp; zookeeper registry center , zero con
 git clone https://github.com/applesline/mini-dubbo.git
 # 1.2.2 使用maven命令编译、打包
 mvn clean package
+# 1.2.3 将编译好的 mini-dubbo-1.0.0.jar导入到项目类路径下
 ```
 ---
 
@@ -106,3 +107,8 @@ public class ServiceConsumer {
 }
 ```
 ### 自此便可以愉快的体验mini-dubbo带来的乐趣了
+
+---
+> 联系作者
+
+#### mini-dubbo相关问题请联系作者： <applesline@163.com>
