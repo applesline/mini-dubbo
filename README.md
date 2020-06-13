@@ -1,11 +1,14 @@
 # mini-dubbo
 A mini dubbo implement, support redis &amp; zookeeper registry center , zero configuration and easy to use
 
+---
+
 > 快速入门
 
 #### 1.添加依赖
 
 ##### 1.1 maven中央仓库下载依赖包（暂不可用）
+```
 <dependencies>
     <dependency>
         <groupId>org.applesline</groupId>
@@ -13,6 +16,7 @@ A mini dubbo implement, support redis &amp; zookeeper registry center , zero con
         <version>1.0.0</version>
     </dependency>
 </dependencies>
+```
 
 ##### 1.2 自行编译jar包（推荐）
 ```
@@ -21,6 +25,7 @@ git clone https://github.com/applesline/mini-dubbo.git
 # 1.2.2 使用maven命令编译、打包
 mvn clean package
 ```
+---
 
 #### 2.业务接口定义
 ```
@@ -30,8 +35,9 @@ public interface GreetingService {
     String sayHello(String name);
 }
 ```
+---
 
-#### 3.接口实现
+#### 3.业务接口实现
 ```
 package org.applesline;
 
@@ -43,6 +49,7 @@ public class GreetingServiceImpl implements GreetingService {
     }
 }
 ```
+---
 
 #### 4.接口与实现类进行绑定
 ```
@@ -58,6 +65,7 @@ public class ServerConfig extends AbstractModule {
     }
 }
 ```
+---
 
 ##### 5.编写服务端程序并注册服务（guice中注册服务，相当于spring的ioc容器）
 ```
@@ -77,6 +85,7 @@ public class ServiceProvider {
 }
 
 ```
+---
 
 #### 6.编写客户端服务
 ```
