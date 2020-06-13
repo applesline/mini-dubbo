@@ -8,7 +8,7 @@ A mini dubbo implement, support redis &amp; zookeeper registry center , zero con
 #### 1.添加依赖
 
 ##### 1.1 maven中央仓库下载依赖包（暂不可用）
-```
+```xml
 <dependencies>
     <dependency>
         <groupId>org.applesline</groupId>
@@ -33,7 +33,7 @@ mvn clean package
 ---
 
 #### 2.业务接口定义
-```
+```java
 package org.applesline.api;
 
 public interface GreetingService {
@@ -43,7 +43,7 @@ public interface GreetingService {
 ---
 
 #### 3.业务接口实现
-```
+```java
 package org.applesline;
 
 import org.applesline.api.GreetingService;
@@ -57,7 +57,7 @@ public class GreetingServiceImpl implements GreetingService {
 ---
 
 #### 4.接口与实现类进行绑定
-```
+```java
 package org.applesline;
 
 import com.google.inject.AbstractModule;
@@ -73,7 +73,7 @@ public class ServerConfig extends AbstractModule {
 ---
 
 ##### 5.编写服务端程序并注册服务（guice中注册服务，相当于spring的ioc容器）
-```
+```java
 package org.applesline;
 
 import org.applesline.mini.dubbo.context.RpcContext;
@@ -93,7 +93,7 @@ public class ServiceProvider {
 ---
 
 #### 6.编写客户端服务
-```
+```java
 package org.applesline;
 
 import org.applesline.api.GreetingService;
