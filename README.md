@@ -19,13 +19,17 @@ A mini dubbo implement, support redis &amp; zookeeper registry center , zero con
 ```
 
 ##### 1.2 自行编译jar包（推荐）
+###### 1.2.1 下载源码
 ```
-# 1.2.1 下载源码
 git clone https://github.com/applesline/mini-dubbo.git
-# 1.2.2 使用maven命令编译、打包
-mvn clean package
-# 1.2.3 将编译好的 mini-dubbo-1.0.0.jar导入到项目类路径下
 ```
+
+###### 1.2.2 使用maven命令编译、打包
+```
+mvn clean package
+```
+
+###### 1.2.3 将编译好的 mini-dubbo-1.0.0.jar导入到项目类路径下
 ---
 
 #### 2.业务接口定义
@@ -78,7 +82,7 @@ import org.applesline.mini.dubbo.protocol.Protocol;
 public class ServiceProvider {
 
     public static void main(String[] args) {
-        // 将服务注册到guice中，默认使用本地zookeeper作为注册中心（127.0.0.1:2181），需要确保本地安装了zk
+        // 将服务注册到guice中，默认使用本地zookeeper作为注册中心（127.0.0.1:2181），需要确保本地安装并启动了zk
         RpcContext.setConfiguration(new ServerConfig());
         Protocol protocol = RpcContext.getBean(Protocol.class);
         protocol.export();
@@ -99,7 +103,7 @@ import org.applesline.mini.dubbo.proxy.ProxyFactory;
 public class ServiceConsumer {
 
     public static void main(String[] args) {
-        // 默认使用本地zookeeper作为注册中心（127.0.0.1:2181），需要确保本地安装了zk
+        // 默认使用本地zookeeper作为注册中心（127.0.0.1:2181），需要确保本地安装并启动了zk
         RpcContext.initContext();
         GreetingService greetingService = ProxyFactory.getProxyObject(GreetingService.class);
         System.out.println(greetingService.sayHello("mini-dubbo"));
