@@ -20,12 +20,12 @@ A mini dubbo implement, support redis &amp; zookeeper registry center , zero con
 
 ##### 1.2 自行编译jar包（推荐）
 ###### 1.2.1 下载源码
-```
+```bash
 git clone https://github.com/applesline/mini-dubbo.git
 ```
 
 ###### 1.2.2 使用maven命令编译、打包
-```
+```bash
 mvn clean package
 ```
 
