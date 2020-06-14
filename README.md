@@ -32,7 +32,7 @@ mvn clean package
 
 ###### 1.2.3 将编译好的 mini-dubbo-1.0.0.jar导入到项目类路径下
 
-#### 1.3 直接下载 [mini-dubbo-1.0.0.jar](https://github.com/applesline/mini-dubbo/releases/download/v1.0.0/mini-dubbo-1.0.0.jar)（推荐）
+##### 1.3 直接下载 [mini-dubbo-1.0.0.jar](https://github.com/applesline/mini-dubbo/releases/download/v1.0.0/mini-dubbo-1.0.0.jar)（推荐）
 
 ---
 
