@@ -29,6 +29,7 @@ public class ZookeeperRegistryService extends AbstractRegistryService {
 
     public ZookeeperRegistryService(String connectString) {
         zkClient = new ZkClient(connectString);
+        initRootPath();
         subscribeChildChanges();
     }
 
@@ -61,6 +62,18 @@ public class ZookeeperRegistryService extends AbstractRegistryService {
 
     public void unregister() {
         zkClient.delete(rootPath + "/" + serverNode);
+    }
+
+    public void initRootPath() {
+        if (!zkClient.exists(rootPath)) {
+            String[] paths = rootPath.split("/");
+            if (!zkClient.exists("/"+paths[1])) {
+                zkClient.createPersistent("/"+paths[1]);
+            }
+            if (!zkClient.exists(rootPath)) {
+                zkClient.createPersistent(rootPath);
+            }
+        }
     }
 
     public void subscribeChildChanges(){
