@@ -19,7 +19,7 @@
 </dependencies>
 ```
 
-##### 1.2 自行编译jar包（推荐）
+##### 1.2 自行编译jar包
 ###### 1.2.1 下载源码
 ```bash
 git clone https://github.com/applesline/mini-dubbo.git
@@ -31,7 +31,12 @@ mvn clean package
 ```
 
 ###### 1.2.3 将编译好的 mini-dubbo-1.0.0.jar导入到项目类路径下
+
+#### 1.3 直接下载 [mini-dubbo-1.0.0.jar](https://github.com/applesline/mini-dubbo/releases/download/v1.0.0/mini-dubbo-1.0.0.jar)（推荐）
+
 ---
+
+
 
 #### 2.业务接口定义
 ```java
