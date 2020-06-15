@@ -8,30 +8,16 @@
 
 #### 1.添加依赖
 
-##### 1.1 maven中央仓库下载依赖包（暂不可用）
+##### 1.1 maven中央仓库下载依赖包
 ```xml
 <dependencies>
     <dependency>
-        <groupId>org.applesline</groupId>
-        <artifactId>mini-dubbo</artifactId>
-        <version>1.0.0</version>
+      <groupId>com.github.applesline</groupId>
+      <artifactId>mini-dubbo</artifactId>
+      <version>1.0.0</version>
     </dependency>
 </dependencies>
 ```
-
-##### 1.2 自行编译jar包（推荐）
-###### 1.2.1 下载源码
-```bash
-git clone https://github.com/applesline/mini-dubbo.git
-```
-
-###### 1.2.2 使用maven命令编译、打包
-```bash
-mvn clean package
-```
-
-###### 1.2.3 将编译好的 mini-dubbo-1.0.0.jar导入到项目类路径下
----
 
 #### 2.业务接口定义
 ```java
