@@ -8,7 +8,6 @@
 
 #### 1.添加依赖
 
-##### 1.1 maven中央仓库下载依赖包
 ```xml
 <dependencies>
     <dependency>
@@ -102,4 +101,4 @@ public class ServiceConsumer {
 ---
 > 联系作者
 
-#### mini-dubbo相关问题请联系作者： <applesline@163.com>
+<applesline@163.com>
